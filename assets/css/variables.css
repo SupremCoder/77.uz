@@ -1,0 +1,19 @@
+:root {
+    --primary-color: #388FF3;
+    --primary-light-color: rgba(56, 143, 243, 0.08);
+    --secondary-color: #8e9297;
+    --danger-color: #e93c47;
+    --danger-light-color: #fef0f1;
+    --text-primary-color: #151515;
+    --black-color: #16191d;
+    --gray-color: #eaedf0;
+    --text-selection-color: #b3d4fc;
+    --placeholder-color: #63676c;
+    --input-bg-color: #f0f3f7;
+}
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 41.6px;
+    
+}
