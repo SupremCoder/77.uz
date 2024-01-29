@@ -58,9 +58,6 @@ body {
     min-height: 100vh;
 }
 
-header,
-footer {}
-
 main {
     flex: 1;
 }

@@ -1,35 +1,41 @@
 @font-face {
-    font-family: 'InterSemiBold';
+    font-family: 'Inter';
     src: url('../fonts/static/Inter-SemiBold.ttf');
-    font-weight: bold;
+    font-weight: 600;
 }
 
 @font-face {
-    font-family: 'InterRegular';
+    font-family: 'Inter';
     src: url('../fonts/static/Inter-Regular.ttf');
+    font-weight: 400;
 }
 
 @font-face {
-    font-family: 'InterMedium';
+    font-family: 'Inter';
     src: url('../fonts/static/Inter-Medium.ttf');
+    font-weight: 500;
 }
 
 @font-face {
-    font-family: 'InterBold';
+    font-family: 'Inter';
     src: url('../fonts/static/Inter-Bold.ttf');
+    font-weight: 700;
 }
 
 @font-face {
-    font-family: 'InterExtraBold';
+    font-family: 'Inter';
     src: url('../fonts/static/Inter-ExtraBold.ttf');
+    font-weight: 800;
 }
 
 @font-face {
-    font-family: 'RobotoMedium';
+    font-family: 'Roboto';
     src: url('../fonts/static/Roboto-Medium.ttf');
+    font-weight: 500;
 }
 
 @font-face {
-    font-family: 'IBMPlexSansRegular';
+    font-family: 'IBM';
     src: url('../fonts/static/IBMPlexSans-Regular.ttf');
+    font-weight: 400;
 }
