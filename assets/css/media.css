@@ -1,3 +1,17 @@
+@media screen and (max-width: 768px) {
+    .row {
+        flex-direction: column
+    }
+
+    .sidebar {
+        flex-basis: 100%;
+    }
+
+    .main {
+        flex-basis: 100%;
+    }
+}
+
 @media screen and (max-width: 480px) {
     .title {
         font-size: 28px;

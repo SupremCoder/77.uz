@@ -12,37 +12,6 @@
     --input-bg-color: #f0f3f7;
 }
 
-.dcenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.dsb {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.dsa {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.centerpos {
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.centerver {
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
 
 .title {
     color: var(--black-color);

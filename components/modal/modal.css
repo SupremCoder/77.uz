@@ -1,0 +1,314 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  z-index: 2;
+  border-radius: 12px;
+  max-width: 378px;
+  width: 100%;
+}
+.modal-form-group {
+  width: 100%;
+}
+.modal.active {
+  display: block;
+  z-index: 1000;
+}
+.overlay.active {
+  display: block;
+}
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-body__img {
+  width: 120px;
+  height: 108px;
+}
+
+.modal-body__title {
+  margin: 25px 0 8px;
+  text-align: center;
+  color: var(--black-color);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.modal-body__subtitle {
+  margin: 0;
+  width: 338px;
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 24px;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.modal-footer .btn {
+  width: 100%;
+}
+
+.modal-btn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.second {
+  margin: 16px 0 -5px;
+}
+
+.second-wrapper {
+  margin-top: 6px;
+}
+
+.third {
+  margin-top: 2px;
+}
+
+.fourth {
+  display: block;
+  max-width: 326px;
+  width: 100%;
+}
+
+.fourth-wrapper {
+  margin-top: 29px;
+}
+
+.fifth {
+  margin-top: -4px;
+  gap: 0;
+  margin-left: -10px;
+}
+
+.fifth::before {
+  position: relative;
+  display: inline-block;
+  background-image: url('../../assets/img/modal-img/phone.svg');
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  content: '';
+  top: 0px;
+  left: 84px;
+  z-index: 1;
+}
+
+.noinfo {
+  max-width: 580px;
+  width: 100%;
+  padding: 32px 121px;
+}
+
+.sixth {
+  margin-top: 4px;
+}
+
+.sixth-top {
+  margin-bottom: 0;
+}
+
+.modal-header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 130%; /* 31.2px */
+}
+
+.modal__subtitle {
+  margin-top: 8px;
+  margin-left: -15px;
+  margin-bottom: 12px;
+}
+
+.modal__subtitle2 {
+  margin-top: 8px;
+  margin-left: -15px;
+  margin-bottom: 8px;
+}
+
+.modal-form {
+  max-width: 338px;
+  width: 100%;
+  margin-bottom: 83px;
+}
+
+.modal-form1 {
+  max-width: 338px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.modal-label {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+}
+
+.seven {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.seven-text {
+  margin: 0;
+  color: var(--secondary-color);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 15.6px */
+  position: relative;
+}
+
+.seven-text::before {
+  display: inline-block;
+  position: absolute;
+  width: 78px;
+  height: 1px;
+  flex-shrink: 0;
+  background-color: #eaedf0;
+  content: '';
+  left: -85px;
+  top: 8px;
+}
+
+.seven-text::after {
+  display: inline-block;
+  position: absolute;
+  width: 78px;
+  height: 1px;
+  flex-shrink: 0;
+  background-color: #eaedf0;
+  content: '';
+  right: -85px;
+  top: 8px;
+}
+
+.eight::before,
+.eight::after {
+  width: 30px;
+}
+
+.eight::before {
+  left: -35px;
+}
+
+.eight::after {
+  right: -35px;
+}
+.icon-x {
+  transition: 0.2s ease-in-out;
+  font-size: 24px;
+}
+.icon-x:hover {
+  color: var(--danger-color);
+}
+
+.address__map {
+  height: 338px;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 565px) {
+  .modal {
+    padding: 20px;
+  }
+
+  .close-btn {
+    font-size: 0.8rem;
+  }
+
+  .modal-body__img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .modal-body__title {
+    margin:  0 5px;
+    line-height: 100%;
+    margin: 10px 0;
+  }
+
+
+  .modal-footer {
+    gap: 8px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .modal {
+    padding: 10px;
+    width: 90%;
+  }
+
+
+  .modal-body__title{
+    margin-top: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .modal-body__subtitle {
+    max-width: 280px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 100%;
+    margin-bottom: 20px;
+    margin-left: -5px;
+  }
+  
+}
+
+
+@media only screen and (max-width: 325px) {
+  .modal-body__subtitle {
+    margin-left: 2px;
+  }
+  
+}

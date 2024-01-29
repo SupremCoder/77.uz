@@ -1,0 +1,66 @@
+:root {
+  --switches-bg-color: #d5d8db;
+  --switches-label-color: #63676c;
+  --switch-bg-color: white;
+  --switch-text-color: black;
+}
+
+.switches-container {
+  width: 335px;
+  position: relative;
+  display: flex;
+  padding: 0;
+  background: var(--switches-bg-color);
+  border-radius: 12px;
+  padding: 4px;
+  margin-top: 100px;
+}
+input[type='radio'] {
+  display: none;
+}
+.language-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.language-switcher__active {
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  height: calc(100% - 8px);
+  border-radius: 8px;
+  z-index: 1;
+  transform: translate(0%, 12%);
+  width: calc(50% - 4px);
+  transition: 0.2s ease-in-out;
+}
+.language-switcher__active.russian {
+  transform: translate(0%, 12%);
+}
+.language-switcher__active.english {
+  transform: translate(100%, 12%);
+}
+.language-switcher__label {
+  padding: 6px 0;
+  color: var(--Black, #63676c);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+}
+.language-switcher {
+  width: 50%;
+  z-index: 2;
+}
+.language-switcher__input:checked ~ .language-switcher__label {
+  font-weight: bold;
+  color: #16191d;
+}
+.language-switcher.russian.active ~ .language-switcher__active {
+  transform: translate(0%, 8%);
+}
+.language-switcher.english.active ~ .language-switcher__active {
+  transform: translate(105%, 8%);
+}

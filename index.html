@@ -21,28 +21,405 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Main Stylesheet Included -->
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/normalize.css" />
     <link rel="stylesheet" href="./assets/css/variables.css" />
     <link rel="stylesheet" href="./assets/css/media.css">
-    <link rel="stylesheet" href="./components/header/header.css" />
-    <link rel="stylesheet" href="./components/footer/footer.css" />
-    <link rel="stylesheet" href="./components/input/input.css" />
-    <link rel="stylesheet" href="./components/button/button.css" />
-    <link rel="stylesheet" href="./components/form/form.css" />
-    <link rel="stylesheet" href="./components/">
+    <link rel="stylesheet" href="./layout/header/header.css" />
+    <link rel="stylesheet" href="./layout/footer/footer.css" />
+    <link rel="stylesheet" href="./pages/productList/ProductList.css" />
+    <link rel="stylesheet" href="./components/form/inputs/inputs.css" />
+    <link rel="stylesheet" href="./components/buttons/buttons.css" />
+    <link rel="stylesheet" href="./components/form/select/select.css" />
+    <link rel="stylesheet" href="./components/pagination/pagination.css" />
+    <link rel="stylesheet" href="./components/categoryList/category.css" />
+    <link rel="stylesheet" href="/assets/css/mainPage.css" />
+    <link rel="stylesheet" href="./components/mainSearch/mainSearch.css" />
+    <link rel="stylesheet" href="./components/modal/modal.css" />
 </head>
 
 <body>
 
-    <div class="header">
-        <nav class="nav">
-            <div class="lang_switch"></div>
-            <div class="phone_details"></div>
-            <div class="brand"></div>
-            <div class="selected"></div>
-            <div class="login"></div>
-        </nav>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Left navigation bar -->
+                <ul class="navbar-list">
+                    <li id="language-switcher" class="navbar-list__item">
+                        <button class="language-button text-sm-subtitle">
+                            <img width="20" height="20" src="./assets/images/header/ru.svg" alt="" />
+                            <span>Русский</span>
+                            <i class="icon-cheveron-down"></i>
+                        </button>
+                        <div class="language-content">
+                            <ul class="language-content__list">
+                                <li class="language-content__item active">
+                                    <img width="20" height="20" src="./assets/images/header/ru.svg" alt="" />
+                                    <span>RU</span>
+                                </li>
+
+                                <li class="language-content__item">
+                                    <img width="20" height="20" src="./assets/images/header/uz.svg" alt="" />
+                                    <span>UZ</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="navbar-list__item phone-wrapper">
+                        <a id="telephone-number" href="tel:+998885005000" class="navbar-list__link">
+                            <i class="icon-phone"></i>
+                            <span class="phone-number text-sm-subtitle">
+                                +998 88 500 50 00
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Header Logo -->
+                <a href="/" class="header-logo">
+                    <img src="../assets/images/logo.svg" alt="" />
+                </a>
+                <!-- Right navigation bar -->
+                <ul class="navbar-list">
+                    <li class="navbar-list__item">
+                        <a id="favorite" href="./pages/favorites/Favorites.html"
+                            class="navbar-list__link text-sm-subtitle">
+                            <div class="favorite-item__parent">
+                                <i class="icon-heart"></i>
+                                <span id="favorite-product__number" class="favorite-product__number">
+                                </span>
+                            </div>
+                            <span class="favorite-title"> Избранные </span>
+                        </a>
+                    </li>
+                    <li class="navbar-list__item divider"></li>
+                    <li class="navbar-list__item">
+                        <button href="" id="registration-btn"
+                            class="navbar-list__link login-button text-sm-subtitle toggle-button"
+                            modal-id="login-layer">
+                            <span class="login-title">
+                                <span class="login-text">Войти </span>
+                                <i class="icon-log-in"></i>
+                            </span>
+
+                            <span class="user-info">
+                                <img src="../.../assets/images/user.svg" alt="" />
+                                <span class="user-name">Шохрух Шавкиев</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 6L12 10L8 14" stroke="#8E9297" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Body Section -->
+    <main class="main-section main-content">
+        <div class="hero-section">
+            <div class="container">
+                <div class="search-wrapper">
+                    <!-- SEARCH FORM -->
+                    <form class="main-search-form">
+                        <label class="search__label" for="searchNow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.927 17.0401L20.4001 20.4001M19.2801 11.4401C19.2801 15.77 15.77 19.2801 11.4401 19.2801C7.11019 19.2801 3.6001 15.77 3.6001 11.4401C3.6001 7.11019 7.11019 3.6001 11.4401 3.6001C15.77 3.6001 19.2801 7.11019 19.2801 11.4401Z"
+                                    stroke="#D5D8DB" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                            <input class="input search__input" type="text" name="searchNow" id="searchNow"
+                                placeholder="Что вы ищите?" />
+                            <button class="btn-search main-search-btn" role="">Поиск</button>
+                        </label>
+                    </form>
+                    <div class="search-suggestion" id="search-suggestion">
+                        <p class="top-txt"></p>
+                        <ul class="search-suggestion__list"></ul>
+                    </div>
+                </div>
+                <div class="category-wrapper">
+                    <div class="content-header">
+                        <h2 class="content-header__title title">Категории</h2>
+                        <p class="content-header__subtitle subtitle">
+                            Вы можете найти все категории, которые вам нужны от покупателя
+                        </p>
+                    </div>
+                    <ul class="category-list" id="category-list">
+                        <!-- RENDERING categories -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Ads Section -->
+            <div class="ads-section">
+                <div class="content-header">
+                    <h2 class="content-header__title title">Объявления</h2>
+                    <p class="content-header__subtitle subtitle">
+                        Вы можете найти все категории, которые вам нужны от покупателя
+                    </p>
+                </div>
+                <div id="main">
+                    <div id="ads-wrapper" class="ads-wrapper__list ads-wrapper"></div>
+                    <div id="pagination">
+                        <button id="prev">
+                            <iconify-icon icon="ooui:next-rtl"></iconify-icon>
+                        </button>
+                        <div id="pages"></div>
+                        <button id="next">
+                            <iconify-icon icon="ooui:next-ltr"></iconify-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Footer Logo -->
+            <a class="footer-logo" href="">
+                <img width="122" height="64" src="../assets/images/logo.svg" alt="" />
+            </a>
+            <!-- Footer Info -->
+            <div class="footer-info">
+                <p class="footer-info__text subtitle text-center">
+                    77.uz marketplace - это виртуальная платформа в Узбекистане, которая
+                    облегчает покупки и продажи, связывая продавцов с потенциальными
+                    клиентами.
+                </p>
+                <ul class="footer-info__list" id="footerList">
+                    <li class="footer-info__item">
+                        <a href="./pages/productList/ProductList.html" class="footer-info__link">
+                            <img src="./assets/images/footer/symbol.svg" alt="" />
+                            Доска объявлений
+                        </a>
+                    </li>
+                    <li class="footer-info__item">
+                        <a href="./pages/static/static.html" class="footer-info__link">
+                            <img src="./assets/images/footer/symbol.svg" alt="" />
+                            Условия пользования
+                        </a>
+                    </li>
+                    <li class="footer-info__item">
+                        <a href="" class="footer-info__link">
+                            <img src="./assets/images/footer/symbol.svg" alt="" />
+                            +998 88 500 50 00
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="development-company">
+            <div class="development-company-wrapper container">
+                <p class="development-company__text copyright">
+                    <strong>© 77.uz</strong>
+                    <span> 2023. Все права защищены</span>
+                </p>
+
+                <a href="https://uic.group/" target="_blank" class="development-company__link">
+                    <span>
+                        <img src="./assets/images/uic.group.svg" alt="" />
+                    </span>
+                    <img src="./assets/images/uic.group.text.svg" alt="" />
+                </a>
+            </div>
+        </div>
+    </footer>
+    <div class="modal" id="login-layer">
+        <div class="modal-header modal-header__wrapper">
+            <h2 class="modal-body__title modal-header__title">Добро пожаловать!</h2>
+            <button class="close-btn" onclick="closeModal('login-layer')">
+                <i class="icon-x"></i>
+            </button>
+        </div>
+        <p class="modal-body__subtitle modal__subtitle">
+            Войти в систему чтобы торговать в системе
+        </p>
+        <div class="modal-body">
+            <form class="modal-form">
+                <!-- Log-in -->
+                <div class="form-group">
+                    <label class="label modal-label" for="log-in">Логин </label>
+                    <input class="input input__login" type="text" name="log-in" id="log-in"
+                        placeholder="Введите логин" />
+                </div>
+                <!-- Password -->
+                <div class="form-group">
+                    <label class="label modal-label" for="password">Пароль </label>
+                    <div class="password-input-group">
+                        <input class="input input-password" type="password" name="password" id="password"
+                            placeholder="Введите пароль" />
+                        <div class="open-eye"></div>
+                        <a href="#" class="forgot-password toggle-button next-modal-button"
+                            modal-id="password-layer">Забыли
+                            пароль?</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer seven">
+            <button class="btn next-modal-button" modal-id="">Войти</button>
+            <p class="seven-text">Хотите стать продавцом?</p>
+            <button class="btn btn-outline next-modal-button" modal-id="application-layer">
+                Подать заявку
+            </button>
+        </div>
     </div>
+    <div class="modal" id="application-layer">
+        <div class="modal-header modal-header__wrapper">
+            <h2 class="modal-body__title modal-header__title">Подать заявку</h2>
+            <button class="close-btn" onclick="closeModal('application-layer')">
+                <i class="icon-x"></i>
+            </button>
+        </div>
+        <p class="modal-body__subtitle modal__subtitle2">
+            Войти в систему чтобы торговать в системе
+        </p>
+        <div class="modal-body">
+            <form class="modal-form1">
+                <!-- Log-in -->
+                <div class="form-group">
+                    <label class="label modal-label" for="fullName">Ф.И.О. </label>
+                    <input class="input input_text" type="text" name="name" id="fullName"
+                        placeholder="Введите вашу Ф.И.О." />
+                </div>
+                <!-- Product name -->
+                <div class="form-group">
+                    <label class="label modal-label" for="product-name">Название продукта
+                    </label>
+                    <input class="input input__product-name" type="text" name="product-name" id="product-name"
+                        placeholder="Введите название продукта" />
+                </div>
+                <!-- Select  -->
+                <div class="form-group">
+                    <div class="select">
+                        <label class="label modal-label" for="select">Адресс </label>
+
+                        <div class="select-menu" id="select">
+                            <div class="select-btn">
+                                <span class="select-menu__context">Выберите свой адрес</span>
+
+                                <span>
+                                    <img class="select-menu__icon" src="./assets/images/icon-arrow-down.svg"
+                                        alt="chevron-up icon" width="24" height="24" />
+                                </span>
+                            </div>
+
+                            <ul class="options"></ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Phone number -->
+                <div class="form-group">
+                    <label class="label modal-label" for="phone-number">Телефон номер
+                    </label>
+                    <div class="phone-input-group">
+                        <span class="country-code">+998</span>
+                        <input class="input input_tel" type="tel" name="phone-number" id="phone-number" required
+                            inputmode="numeric" placeholder="() ___--__" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer seven">
+            <button class="btn next-modal-button" modal-id="address-layer">
+                Продолжить
+            </button>
+            <p class="seven-text eight">Если вы продавец, войдите на платформу</p>
+            <button onclick="closeModal('application-layer')" class="btn toggle-button btn-outline next-modal-button"
+                modal-id="login-layer">
+                Войти
+            </button>
+        </div>
+    </div>
+    <div class="modal" id="password-layer">
+        <div class="modal-header">
+            <button class="close-btn" onclick="closeModal('password-layer')">
+                <i class="icon-x"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <img class="modal-body__img" src="./assets/images/modal-img/info.svg" alt="Info icon" width="64"
+                height="64" />
+            <p class="modal-body__subtitle">
+                Забыли пароль? Для восстановления пароля обратитесь администратору
+            </p>
+        </div>
+        <div class="modal-footer fifth">
+            <button onclick="closeModal('password-layer')" class="btn">
+                +998 97 450 45 00
+            </button>
+        </div>
+    </div>
+    <div class="modal" id="address-layer">
+        <div class="modal-header modal-header__wrapper">
+            <h2 class="modal-body__title modal-header__title modal-adress">
+                Введите адресс
+            </h2>
+            <button class="close-btn" onclick="closeModal('address-layer')">
+                <i class="icon-x"></i>
+            </button>
+        </div>
+        <p class="modal-body__subtitle modal__subtitle2">
+            Войти в систему чтобы торговать в системе
+        </p>
+        <div class="modal-body">
+            <div class="form-group modal-form-group">
+                <label class="label modal-label" for="address">Адресс</label>
+                <input class="input input__login" type="text" name="address" id="address"
+                    placeholder="Введите свой адрес" />
+            </div>
+            <iframe class="address__map" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=%D0%B3.%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82,%20%D1%83%D0%BB.%D0%9E%D0%BB%D0%BC%D0%B0%D1%87%D0%B8%201-%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%B7%D0%B4%2013%20%D0%B4%D0%BE%D0%BC%20+(%D0%9C%D0%B5%D1%81%D1%82%D0%BE%D0%BF%D0%BE%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+        </div>
+        <div class="modal-footer fourth-wrapper">
+            <button class="btn next-modal-button" modal-id="sending-layer">
+                Подать заявку
+            </button>
+        </div>
+    </div>
+    <div class="modal" id="sending-layer">
+        <div class="modal-header">
+            <button class="close-btn" onclick="closeModal('sending-layer')">
+                <i class="icon-x"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <img class="modal-body__img second" src="./assets/images/modal-img/wishlist-solid.svg" alt="Wishlist"
+                width="120" height="113" />
+            <h2 class="modal-body__title">Ваша заявка принята!</h2>
+            <p class="modal-body__subtitle fourth">
+                Наши сотрудники свяжутся с вами в ближайшее время
+            </p>
+        </div>
+        <div class="modal-footer fourth-wrapper">
+            <button onclick="closeModal('sending-layer')" class="btn">
+                Спасибо
+            </button>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+    <!-- Custom Js Included -->
+    <script src="./components/header/header.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="./components/footer/footer.js"></script>
+    <script src="./components/modal/modal.js"></script>
+    <script src="./components/form/inputs/inputs.js"></script>
+    <script src="./components/form/select/select.js"></script>
+    <script src="./assets/data/category.js"></script>
+    <script src="./components/languageSwitcher/languageSwitcher.js"></script>
+    <script src="./components/mainSearch/mainSearch.js"></script>
+    <script src="./components/categoryList/categoryList.js"></script>
+    <script type="module" src="/js/ads-wrapper.js"></script>
 
 </body>
 
