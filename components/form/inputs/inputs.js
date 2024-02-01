@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let currencyIcon = document.querySelector('.currency-icon')
   let currentCurrency = document.querySelector('.current-currency')
   let price = document.getElementById('price')
+  console.log(price);
   let currencyOptions = document.querySelectorAll('.currency__option')
 
   // only Numbers can be inputted
