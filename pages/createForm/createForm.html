@@ -1,566 +1,422 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ================== Favicon link ================== -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/x-icon" href="https://77.uz/favicon.svg" />
+  <!-- ================== Favicon link ================== -->
 
-    <!-- ================== Google Fonts links ================== -->
+  <link rel="icon" type="image/x-icon" href="https://77.uz/favicon.svg" />
 
-    <link rel="stylesheet" href="../../assets/css/fonts.css" />
+  <!-- ================== Google Fonts links ================== -->
 
-    <!-- ================== Css links ================== -->
+  <link rel="stylesheet" href="../../assets/css/fonts.css" />
 
-    <link rel="stylesheet" href="../../pages/layout/layout.css" />
-    <link rel="stylesheet" href="../../components/footer/footer.css" />
-    <link rel="stylesheet" href="../../components/breadCrumb/breadCrumb.css" />
-    <link rel="stylesheet" href="../../components/header/header.css" />
-    <link rel="stylesheet" href="../../components/form/inputs/inputs.css" />
-    <link rel="stylesheet" href="../../components/buttons/buttons.css" />
-    <link
-      rel="stylesheet"
-      href="../../components/languageSwitcher/languageSwitcher.css"
-    />
-    <link rel="stylesheet" href="../../components/tab/tab.css" />
-    <link rel="stylesheet" href="./createForm.css" />
-    <link rel="stylesheet" href="../../assets/css/variables.css" />
-    <link rel="stylesheet" href="../../assets/css/normalize.css" />
-    <link rel="stylesheet" href="../../components/form/select/select.css" />
-    <link
-      rel="stylesheet"
-      href="../../components/prevPageHeader/prevPageHeader.css"
-    />
-    <link rel="stylesheet" href="../../components/modal/modal.css" />
-    <link rel="stylesheet" href="../../assets/css/style.css" />
+  <!-- ================== Css links ================== -->
 
-    <link
-      rel="stylesheet"
-      href="../../components/imageUploader/imageUploader.css"
-    />
+  <link rel="stylesheet" href="../../pages/layout/layout.css" />
+  <link rel="stylesheet" href="../../layout/header/header.css" />
+  <link rel="stylesheet" href="../../layout/footer/footer.css" />
+  <link rel="stylesheet" href="../../components/breadCrumb/breadCrumb.css" />
+  <link rel="stylesheet" href="../../components/form/inputs/inputs.css" />
+  <link rel="stylesheet" href="../../components/buttons/buttons.css" />
+  <link rel="stylesheet" href="../../components/languageSwitcher/languageSwitcher.css" />
+  <link rel="stylesheet" href="../../components/tab/tab.css" />
+  <link rel="stylesheet" href="./createForm.css" />
+  <link rel="stylesheet" href="../../assets/css/variables.css" />
+  <link rel="stylesheet" href="../../assets/css/normalize.css" />
+  <link rel="stylesheet" href="../../components/form/select/select.css" />
+  <link rel="stylesheet" href="../../components/prevPageHeader/prevPageHeader.css" />
+  <link rel="stylesheet" href="../../components/modal/modal.css" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
 
-    <!-- ================== Website Title ================== -->
-    <title>77.uz | Create Form</title>
-  </head>
+  <link rel="stylesheet" href="../../components/imageUploader/imageUploader.css" />
 
-  <body>
-    <div id="dropbox" class="dropbox">
-      <div id="dropbox__container" class="dropbox__container">
-        <div class="dropbox__float">
-          <img
-            class="dropbox__float-image"
-            draggable="false"
-            src="../../assets/img/drop-image.svg"
-          />
-          <p class="dropbox__float-title">Перетащите изображение</p>
-        </div>
+  <!-- ================== Website Title ================== -->
+  <title>77.uz | Create Form</title>
+</head>
+
+<body>
+  <div id="dropbox" class="dropbox">
+    <div id="dropbox__container" class="dropbox__container">
+      <div class="dropbox__float">
+        <img class="dropbox__float-image" draggable="false" src="../../assets/img/drop-image.svg" />
+        <p class="dropbox__float-title">Перетащите изображение</p>
       </div>
     </div>
+  </div>
 
-    <div class="blocker"></div>
+  <div class="blocker"></div>
 
-    <!-- Header Section -->
-    <header class="header">
-      <div class="container">
-        <nav class="navbar">
-          <!-- Left navigation bar -->
-          <ul class="navbar-list">
-            <li id="language-switcher" class="navbar-list__item">
-              <button class="language-button text-sm-subtitle">
-                <img
-                  width="20"
-                  height="20"
-                  src="/assets/img/header/ru.svg"
-                  alt=""
-                />
-                <span>Русский</span>
-                <i class="icon-cheveron-down"></i>
-              </button>
-              <div class="language-content">
-                <ul class="language-content__list">
-                  <li class="language-content__item active">
-                    <img
-                      width="20"
-                      height="20"
-                      src="/assets/img/header/ru.svg"
-                      alt=""
-                    />
-                    <span>RU</span>
-                  </li>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Left navigation bar -->
+        <ul class="navbar-list">
+          <li id="language-switcher" class="navbar-list__item">
+            <button class="language-button text-sm-subtitle">
+              <img width="20" height="20" src="../../assets/img/header/ru.svg" alt="" />
+              <span>Русский</span>
+              <i class="icon-cheveron-down"></i>
+            </button>
+            <div class="language-content">
+              <ul class="language-content__list">
+                <li class="language-content__item active">
+                  <img width="20" height="20" src="../../assets/img/header/ru.svg" alt="" />
+                  <span>RU</span>
+                </li>
 
-                  <li class="language-content__item">
-                    <img
-                      width="20"
-                      height="20"
-                      src="/assets/img/header/uz.svg"
-                      alt=""
-                    />
-                    <span>UZ</span>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="navbar-list__item phone-wrapper">
-              <a
-                id="telephone-number"
-                href="tel:+998885005000"
-                class="navbar-list__link"
-              >
-                <i class="icon-phone"></i>
-                <span class="phone-number text-sm-subtitle">
-                  +998 88 500 50 00
+                <li class="language-content__item">
+                  <img width="20" height="20" src="../../assets/img/header/uz.svg" alt="" />
+                  <span>UZ</span>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navbar-list__item phone-wrapper">
+            <a id="telephone-number" href="tel:+998885005000" class="navbar-list__link">
+              <i class="icon-phone"></i>
+              <span class="phone-number text-sm-subtitle">
+                +998 88 500 50 00
+              </span>
+            </a>
+          </li>
+        </ul>
+        <!-- Header Logo -->
+        <a href="/" class="header-logo">
+          <img src="../../assets/img/logo.svg" alt="" />
+        </a>
+        <!-- Right navigation bar -->
+        <ul class="navbar-list">
+          <li class="navbar-list__item">
+            <a id="favorite" href="../favorites/Favorites.html" class="navbar-list__link text-sm-subtitle">
+              <div class="favorite-item__parent">
+                <i class="icon-heart"></i>
+                <span id="favorite-product__number" class="favorite-product__number">
                 </span>
-              </a>
-            </li>
-          </ul>
-          <!-- Header Logo -->
-          <a href="/" class="header-logo">
-            <img src="/assets/img/logo.svg" alt="" />
+              </div>
+              <span class="favorite-title"> Избранные </span>
+            </a>
+          </li>
+          <li class="navbar-list__item divider"></li>
+          <li class="navbar-list__item">
+            <button href="" id="registration-btn" class="navbar-list__link login-button text-sm-subtitle">
+              <span class="login-title">
+                <span class="login-text">Войти </span>
+                <i class="icon-log-in"></i>
+              </span>
+
+              <span class="user-info">
+                <img src="../../assets/img/user.svg" alt="" />
+                <span class="user-name">Шохрух Шавкиев</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 6L12 10L8 14" stroke="#8E9297" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Bread-Crumb Section -->
+  <div class="container">
+    <div class="wrapper-crumb">
+      <ul class="bread-crumb">
+        <li class="bread-crumb__item">
+          <a href="../../index.html" class="bread-crumb__link">Главная</a>
+        </li>
+        <li class="bread-crumb__item">
+          <a href="" class="bread-crumb__link active">Создать объявления</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Main Section -->
+  <main class="main">
+    <div class="create-form">
+      <!-- Create Form -->
+      <form class="create-form-container">
+        <!-- Create Form Header -->
+        <div class="prev-page__header">
+          <a href="/" class="prev-page__button">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.4448 24L6.66699 16M6.66699 16L14.4448 8M6.66699 16H25.3337" stroke="black" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </a>
-          <!-- Right navigation bar -->
-          <ul class="navbar-list">
-            <li class="navbar-list__item">
-              <a
-                id="favorite"
-                href="../favorites/Favorites.html"
-                class="navbar-list__link text-sm-subtitle"
-              >
-                <div class="favorite-item__parent">
-                  <i class="icon-heart"></i>
-                  <span
-                    id="favorite-product__number"
-                    class="favorite-product__number"
-                  >
+          <h1 class="prev-page__title">Создать объявления</h1>
+        </div>
+        <!-- Create Form Body -->
+        <div class="create-form__body">
+          <!-- Contact Info -->
+          <div class="contact-info create-form__content">
+            <p class="contact-info__title form-title">Котактная информация</p>
+            <div class="contact-info__form create-wrapper">
+              <div class="form-group">
+                <label class="label" for="fullName">Ф.И.О. </label>
+                <input class="input create-input input_text" type="text" name="name" id="fullName"
+                  placeholder="Введите вашу Ф.И.О." />
+              </div>
+
+              <div class="form-inner">
+                <!-- Phone number -->
+                <div class="form-group">
+                  <label class="label" for="phone-number">Телефон номер
+                  </label>
+                  <div class="phone-input-group">
+                    <span class="country-code">+998</span>
+                    <input class="input create-input input_tel" type="tel" name="phone-number" id="phone-number"
+                      inputmode="numeric" placeholder="(__) ___-__-__" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="label" for="address">Адресс</label>
+                  <input class="input create-input input_text" type="text" name="name" id="address"
+                    placeholder="8897+PMP, Almachi Street, Тоshkent, Узбекистан" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product Info -->
+          <div class="product-info create-form__content">
+            <p class="product-info__title form-title">Данные продукта</p>
+            <div class="switches-container">
+              <span class="language-switcher__active"></span>
+              <label class="language-switcher russian">
+                <input class="language-switcher__input" type="radio" language-id="russian" name="language"
+                  value="russian" checked />
+                <span class="language-switcher__label">Russian</span>
+              </label>
+              <label class="language-switcher english">
+                <input class="language-switcher__input" type="radio" language-id="english" name="language"
+                  value="english" />
+                <span class="language-switcher__label">English</span>
+              </label>
+            </div>
+            <div class="product-info__form create-wrapper">
+              <div class="form-group">
+                <label class="label" for="product-name">Название продукта
+                </label>
+                <input class="input create-input input__product-name" type="text" name="product-name" id="product-name"
+                  placeholder="Введите название продукта" />
+              </div>
+              <div class="form-group">
+                <label class="label" for="textarea">Описание </label>
+                <textarea class="textarea create-input textarea__product-name" type="text" name="textarea" id="textarea"
+                  placeholder="Введите описание"></textarea>
+              </div>
+            </div>
+          </div>
+          <!-- Product Detail -->
+          <div class="product-detail create-form__content">
+            <p class="product-detail__title form-title">Категория</p>
+            <div class="product-detail__form create-wrapper">
+              <!-- Select Wrapper -->
+              <div class="form-group">
+                <div class="select">
+                  <label class="select-label" for="select-address">Адресс</label>
+
+                  <div class="select-menu" id="select-address">
+                    <div class="select-menu__btn">
+                      <span class="select-menu__context">Выберите свой адрес</span>
+
+                      <span>
+                        <img class="select-menu__icon" src="../../assets/img/icon-arrow-down.svg" alt="chevron-up icon"
+                          width="24" height="24" />
+                      </span>
+                    </div>
+
+                    <ul class="options">
+                      <li class="option">
+                        <span class="option-text">Г. Ташкент</span>
+                      </li>
+
+                      <li class="option">
+                        <span class="option-text">Андижан</span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">Бухара</span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">Навои </span>
+                      </li>
+
+                      <li class="option">
+                        <span class="option-text">Самарканд</span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">Джизак </span>
+                      </li>
+
+                      <li class="option">
+                        <span class="option-text">Джизак </span>
+                      </li>
+                      <li class="option">
+                        <span class="option-text">Джизак </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Price -->
+              <div class="form-group">
+                <label class="label" for="price">Цена</label>
+                <div class="price-input-group">
+                  <input class="input input_price" type="text" name="price" id="price" inputmode="numeric"
+                    placeholder="Введите сумму  в UZS" />
+                  <div class="currency-wrapper">
+                    <div class="currency-card">
+                      <span class="current-currency">UZS</span>
+                      <i class="currency-icon icon-cheveron-down"></i>
+                    </div>
+                    <ul class="currency-list">
+                      <li class="currency__option">UZS</li>
+                      <li class="currency__option">USD</li>
+                      <li class="currency__option">RUB</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-detail create-form__content">
+            <p class="product-detail__title form-title">Фото</p>
+            <p class="product-detail__subtitle form-subtitle">
+              Первое фото будет на обложке объявления. Перетащите, чтобы
+              изменить порядок.
+            </p>
+            <div class="product-detail__form create-wrapper">
+              <div id="gallery-wrapper" class="gallery-box"></div>
+              <div class="modal" id="delete-layer">
+                <div class="modal-header">
+                  <button class="close-btn" onclick="closeModal('delete-layer')">
+                    <i class="icon-x"></i>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img class="modal-body__img" src="../../assets/img/modal-img/trash.svg" alt="trash" width="120"
+                    height="108" />
+                  <h2 class="modal-body__title">Удалить объявление</h2>
+                  <p class="modal-body__subtitle">
+                    Вы точно хотите удалить объявление, все ваши данные о
+                    продукте будут потеряны
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button onclick="closeModal('delete-layer')" class="btn btn-secondary">
+                    Отменить
+                  </button>
+                  <button class="btn btn-danger">Удалить</button>
+                </div>
+              </div>
+
+              <div class="drop-image__item">
+                <div class="gallery__item-empty" draggable="false">
+                  <img src="../../assets/img/image-add.svg" alt="add image" />
+                  <h3>Перетащите изображение сюда</h3>
+                  <span>Перетащите свое изображение сюда или
+                    <label for="files" class="choose-text">выберите
+                      <input id="files" type="file" accept="image/*" multiple />
+                    </label>
                   </span>
                 </div>
-                <span class="favorite-title"> Избранные </span>
-              </a>
-            </li>
-            <li class="navbar-list__item divider"></li>
-            <li class="navbar-list__item">
-              <button
-                href=""
-                id="registration-btn"
-                class="navbar-list__link login-button text-sm-subtitle"
-              >
-                <span class="login-title">
-                  <span class="login-text">Войти </span>
-                  <i class="icon-log-in"></i>
-                </span>
+              </div>
+            </div>
+          </div>
 
-                <span class="user-info">
-                  <img src="../../assets/img/user.svg" alt="" />
-                  <span class="user-name">Шохрух Шавкиев</span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 6L12 10L8 14"
-                      stroke="#8E9297"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
+          <!-- Agreement terms -->
+          <div class="agreement-terms create-form__content">
+            <p class="agreement-terms__description">
+              <span>BOX</span>
+
+              Даю свое согласие
+              <a href="../static-page/index.html" class="terms-link" href="">правилами пользования</a>
+              и обработки моих данных
+            </p>
+            <div class="agreement-terms__buttons">
+              <button class="btn btn-secondary">Отменить</button>
+              <button type="submit" class="btn create-submit-button">
+                Опубликовать
               </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <!-- Bread-Crumb Section -->
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+  <!-- Footer Section -->
+  <footer class="footer">
     <div class="container">
-      <div class="wrapper-crumb">
-        <ul class="bread-crumb">
-          <li class="bread-crumb__item">
-            <a href="../../index.html" class="bread-crumb__link">Главная</a>
+      <!-- Footer Logo -->
+      <a class="footer-logo" href="">
+        <img width="122" height="64" src="../../assets/img/logo.svg" alt="" />
+      </a>
+      <!-- Footer Info -->
+      <div class="footer-info">
+        <p class="footer-info__text subtitle text-center">
+          77.uz marketplace - это виртуальная платформа в Узбекистане, которая
+          облегчает покупки и продажи, связывая продавцов с потенциальными
+          клиентами.
+        </p>
+        <ul class="footer-info__list" id="footerList">
+          <li class="footer-info__item">
+            <a href="../productList/ProductList.html" class="footer-info__link">
+              <img src="../../assets/img/footer/symbol.svg" alt="" />
+              Доска объявлений
+            </a>
           </li>
-          <li class="bread-crumb__item">
-            <a href="" class="bread-crumb__link active">Создать объявления</a>
+          <li class="footer-info__item">
+            <a href="../static/static.html" class="footer-info__link">
+              <img src="../../assets/img/footer/symbol.svg" alt="" />
+              Условия пользования
+            </a>
+          </li>
+          <li class="footer-info__item">
+            <a href="" class="footer-info__link">
+              <img src="../../assets/img/footer/symbol.svg" alt="" />
+              +998 88 500 50 00
+            </a>
           </li>
         </ul>
       </div>
     </div>
-    <!-- Main Section -->
-    <main class="main">
-      <div class="create-form">
-        <!-- Create Form -->
-        <form class="create-form-container">
-          <!-- Create Form Header -->
-          <div class="prev-page__header">
-            <a href="/" class="prev-page__button">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.4448 24L6.66699 16M6.66699 16L14.4448 8M6.66699 16H25.3337"
-                  stroke="black"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-            <h1 class="prev-page__title">Создать объявления</h1>
-          </div>
-          <!-- Create Form Body -->
-          <div class="create-form__body">
-            <!-- Contact Info -->
-            <div class="contact-info create-form__content">
-              <p class="contact-info__title form-title">Котактная информация</p>
-              <div class="contact-info__form create-wrapper">
-                <div class="form-group">
-                  <label class="label" for="fullName">Ф.И.О. </label>
-                  <input
-                    class="input create-input input_text"
-                    type="text"
-                    name="name"
-                    id="fullName"
-                    placeholder="Введите вашу Ф.И.О."
-                  />
-                </div>
+    <div class="development-company">
+      <div class="development-company-wrapper container">
+        <p class="development-company__text copyright">
+          <strong>© 77.uz</strong>
+          <span> 2023. Все права защищены</span>
+        </p>
 
-                <div class="form-inner">
-                  <!-- Phone number -->
-                  <div class="form-group">
-                    <label class="label" for="phone-number"
-                      >Телефон номер
-                    </label>
-                    <div class="phone-input-group">
-                      <span class="country-code">+998</span>
-                      <input
-                        class="input create-input input_tel"
-                        type="tel"
-                        name="phone-number"
-                        id="phone-number"
-                        inputmode="numeric"
-                        placeholder="(__) ___-__-__"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="label" for="address">Адресс</label>
-                    <input
-                      class="input create-input input_text"
-                      type="text"
-                      name="name"
-                      id="address"
-                      placeholder="8897+PMP, Almachi Street, Тоshkent, Узбекистан"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Product Info -->
-            <div class="product-info create-form__content">
-              <p class="product-info__title form-title">Данные продукта</p>
-              <div class="switches-container">
-                <span class="language-switcher__active"></span>
-                <label class="language-switcher russian">
-                  <input
-                    class="language-switcher__input"
-                    type="radio"
-                    language-id="russian"
-                    name="language"
-                    value="russian"
-                    checked
-                  />
-                  <span class="language-switcher__label">Russian</span>
-                </label>
-                <label class="language-switcher english">
-                  <input
-                    class="language-switcher__input"
-                    type="radio"
-                    language-id="english"
-                    name="language"
-                    value="english"
-                  />
-                  <span class="language-switcher__label">English</span>
-                </label>
-              </div>
-              <div class="product-info__form create-wrapper">
-                <div class="form-group">
-                  <label class="label" for="product-name"
-                    >Название продукта
-                  </label>
-                  <input
-                    class="input create-input input__product-name"
-                    type="text"
-                    name="product-name"
-                    id="product-name"
-                    placeholder="Введите название продукта"
-                  />
-                </div>
-                <div class="form-group">
-                  <label class="label" for="textarea">Описание </label>
-                  <textarea
-                    class="textarea create-input textarea__product-name"
-                    type="text"
-                    name="textarea"
-                    id="textarea"
-                    placeholder="Введите описание"
-                  ></textarea>
-                </div>
-              </div>
-            </div>
-            <!-- Product Detail -->
-            <div class="product-detail create-form__content">
-              <p class="product-detail__title form-title">Категория</p>
-              <div class="product-detail__form create-wrapper">
-                <!-- Select Wrapper -->
-                <div class="form-group">
-                  <div class="select">
-                    <label class="select-label" for="select-address"
-                      >Адресс</label
-                    >
-
-                    <div class="select-menu" id="select-address">
-                      <div class="select-menu__btn">
-                        <span class="select-menu__context"
-                          >Выберите свой адрес</span
-                        >
-
-                        <span>
-                          <img
-                            class="select-menu__icon"
-                            src="../../assets/img/icon-arrow-down.svg"
-                            alt="chevron-up icon"
-                            width="24"
-                            height="24"
-                          />
-                        </span>
-                      </div>
-
-                      <ul class="options">
-                        <li class="option">
-                          <span class="option-text">Г. Ташкент</span>
-                        </li>
-
-                        <li class="option">
-                          <span class="option-text">Андижан</span>
-                        </li>
-                        <li class="option">
-                          <span class="option-text">Бухара</span>
-                        </li>
-                        <li class="option">
-                          <span class="option-text">Навои </span>
-                        </li>
-
-                        <li class="option">
-                          <span class="option-text">Самарканд</span>
-                        </li>
-                        <li class="option">
-                          <span class="option-text">Джизак </span>
-                        </li>
-
-                        <li class="option">
-                          <span class="option-text">Джизак </span>
-                        </li>
-                        <li class="option">
-                          <span class="option-text">Джизак </span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Price -->
-                <div class="form-group">
-                  <label class="label" for="price">Цена</label>
-                  <div class="price-input-group">
-                    <input
-                      class="input input_price"
-                      type="text"
-                      name="price"
-                      id="price"
-                      inputmode="numeric"
-                      placeholder="Введите сумму  в UZS"
-                    />
-                    <div class="currency-wrapper">
-                      <div class="currency-card">
-                        <span class="current-currency">UZS</span>
-                        <i class="currency-icon icon-cheveron-down"></i>
-                      </div>
-                      <ul class="currency-list">
-                        <li class="currency__option">UZS</li>
-                        <li class="currency__option">USD</li>
-                        <li class="currency__option">RUB</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="product-detail create-form__content">
-              <p class="product-detail__title form-title">Фото</p>
-              <p class="product-detail__subtitle form-subtitle">
-                Первое фото будет на обложке объявления. Перетащите, чтобы
-                изменить порядок.
-              </p>
-              <div class="product-detail__form create-wrapper">
-                <div id="gallery-wrapper" class="gallery-box"></div>
-                <div class="modal" id="delete-layer">
-                  <div class="modal-header">
-                    <button
-                      class="close-btn"
-                      onclick="closeModal('delete-layer')"
-                    >
-                      <i class="icon-x"></i>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <img
-                      class="modal-body__img"
-                      src="../../assets/img/modal-img/trash.svg"
-                      alt="trash"
-                      width="120"
-                      height="108"
-                    />
-                    <h2 class="modal-body__title">Удалить объявление</h2>
-                    <p class="modal-body__subtitle">
-                      Вы точно хотите удалить объявление, все ваши данные о
-                      продукте будут потеряны
-                    </p>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      onclick="closeModal('delete-layer')"
-                      class="btn btn-secondary"
-                    >
-                      Отменить
-                    </button>
-                    <button class="btn btn-danger">Удалить</button>
-                  </div>
-                </div>
-
-                <div class="drop-image__item">
-                  <div class="gallery__item-empty" draggable="false">
-                    <img src="../../assets/img/image-add.svg" alt="add image" />
-                    <h3>Перетащите изображение сюда</h3>
-                    <span
-                      >Перетащите свое изображение сюда или
-                      <label for="files" class="choose-text"
-                        >выберите
-                        <input
-                          id="files"
-                          type="file"
-                          accept="image/*"
-                          multiple
-                        />
-                      </label>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Agreement terms -->
-            <div class="agreement-terms create-form__content">
-              <p class="agreement-terms__description">
-                <span>BOX</span>
-
-                Даю свое согласие
-                <a href="../static-page/index.html" class="terms-link" href=""
-                  >правилами пользования</a
-                >
-                и обработки моих данных
-              </p>
-              <div class="agreement-terms__buttons">
-                <button class="btn btn-secondary">Отменить</button>
-                <button type="submit" class="btn create-submit-button">
-                  Опубликовать
-                </button>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-    </main>
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="container">
-        <!-- Footer Logo -->
-        <a class="footer-logo" href="">
-          <img width="122" height="64" src="../../assets/img/logo.svg" alt="" />
+        <a href="https://uic.group/" target="_blank" class="development-company__link">
+          <span>
+            <img src="../../assets/img/uic.group.svg" alt="" />
+          </span>
+          <img src="../../assets/img/uic.group.text.svg" alt="" />
         </a>
-        <!-- Footer Info -->
-        <div class="footer-info">
-          <p class="footer-info__text subtitle text-center">
-            77.uz marketplace - это виртуальная платформа в Узбекистане, которая
-            облегчает покупки и продажи, связывая продавцов с потенциальными
-            клиентами.
-          </p>
-          <ul class="footer-info__list" id="footerList">
-            <li class="footer-info__item">
-              <a
-                href="../productList/ProductList.html"
-                class="footer-info__link"
-              >
-                <img src="../../assets/img/footer/symbol.svg" alt="" />
-                Доска объявлений
-              </a>
-            </li>
-            <li class="footer-info__item">
-              <a href="../static/static.html" class="footer-info__link">
-                <img src="../../assets/img/footer/symbol.svg" alt="" />
-                Условия пользования
-              </a>
-            </li>
-            <li class="footer-info__item">
-              <a href="" class="footer-info__link">
-                <img src="../../assets/img/footer/symbol.svg" alt="" />
-                +998 88 500 50 00
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
-      <div class="development-company">
-        <div class="development-company-wrapper container">
-          <p class="development-company__text copyright">
-            <strong>© 77.uz</strong>
-            <span> 2023. Все права защищены</span>
-          </p>
+    </div>
+  </footer>
 
-          <a
-            href="https://uic.group/"
-            target="_blank"
-            class="development-company__link"
-          >
-            <span>
-              <img src="../../assets/img/uic.group.svg" alt="" />
-            </span>
-            <img src="../../assets/img/uic.group.text.svg" alt="" />
-          </a>
-        </div>
-      </div>
-    </footer>
+  <div class="overlay"></div>
+  <!-- ================== Javascript Links ================== -->
+  <script src="../../components/imageUploader/imageUploader.js" defer></script>
+  <script src="../../components/modal/modal.js"></script>
+  <script src="../../components/languageSwitcher/languageSwitcher.js"></script>
+  <script src="../../components/form/inputs/inputs.js"></script>
+  <script src="../../layout/header/header.js"></script>
+  <script src="../../layout/footer/footer.js"></script>
+  <script src="../../components/form/select/select.js"></script>
+  <script src="../../components/tab/tab.js"></script>
+  <script src="./createForm.js"></script>
+  <script></script>
+</body>
 
-    <div class="overlay"></div>
-    <!-- ================== Javascript Links ================== -->
-    <script src="../../components/imageUploader/imageUploader.js" defer></script>
-    <script src="../../components/modal/modal.js"></script>
-    <script src="../../components/languageSwitcher/languageSwitcher.js"></script>
-    <script src="/components/form/inputs/inputs.js"></script>
-    <script src="../../components/header/header.js"></script>
-    <script src="../../components/footer/footer.js"></script>
-    <script src="../../components/form/select/select.js"></script>
-    <script src="../../components/tab/tab.js"></script>
-    <script src="./createForm.js"></script>
-    <script></script>
-  </body>
 </html>

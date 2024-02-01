@@ -1,4 +1,4 @@
-import { gridViewStyle } from '/utils/cardstyle.js'
+import { gridViewStyle } from '../../utils/cardstyle'
 
 const gridWrapper = document.getElementById('favorites-wrapper')
 const cardIcons = document.getElementsByClassName('icon')
@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   })
 
-  if(favoritesProducts.length === 0) {
-    gridWrapper.innerHTML=`
+  if (favoritesProducts.length === 0) {
+    gridWrapper.innerHTML = `
       <div class="not-favorites">
         <img src="/assets/img/404.svg" alt="">
         <h1 class="title not-favorites__title">Избранные все еще доступно</h1>
